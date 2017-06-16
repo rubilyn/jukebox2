@@ -1,4 +1,4 @@
-![screenshot-jukebox](https://user-images.githubusercontent.com/19618674/27207172-76967f1a-51f1-11e7-9fae-68873d2b3fca.png)
+![screencapture-jukebox](https://user-images.githubusercontent.com/19618674/27207366-262f1ed6-51f3-11e7-86fd-e87f61d75683.png)
 
 ## Tasks
 - Improve the Jukebox to allow users to queue-up songs to be played next to keep listening to your awesome tunes! 
