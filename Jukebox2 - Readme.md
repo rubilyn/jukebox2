@@ -1,3 +1,5 @@
+![screenshot-jukebox](https://user-images.githubusercontent.com/19618674/27207172-76967f1a-51f1-11e7-9fae-68873d2b3fca.png)
+
 ## Tasks
 - Improve the Jukebox to allow users to queue-up songs to be played next to keep listening to your awesome tunes! 
 - Let's use some jQuery to do this.
