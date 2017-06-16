@@ -7,28 +7,32 @@ $(document).ready(function() {
   const songs = [];
   const empty = '';
 
-  $('#song-form input[type="submit"]').on('click', function() {
+  const onComplete = function () {
+    songs.shift();
+    $('#play-button').slideDown();
+    $('li').eq(0).remove();
+    if ($('li').eq(0) != null) {
+      $('li').eq(0).append(' Now Playing...');
+      playSong(parseSong(songs[0]), 400, onComplete);
+    }
+  
+  };
+
+  $('#songForm input[type="submit"]').on('click', function() {
     const song = $('#songString').val();
     songs.push(song);
     console.log('form submitted')
-
     const songName = $('#songName').val();
-
 
     $('#song-queue').append('<li>' + songName + ' <span>' + song + '</span></li>');
     $('span').hide();
-    $('#song-form input[type="text"]').val('');
+    $('#songForm input[type="text"]').val('');
   });
 
   $('#play-button').on('click', function() {
     $(this).slideUp();
     $('li').eq(0).append(' Now Playing...');
-
-    playSong(parseSong(songs[0]), 300, function() {
-      songs.shift();
-      $('#play-button').slideDown();
-      $('li').eq(0).remove();
-    });
+    playSong(parseSong(songs[0]), 400, onComplete);
   });
 
   $('ul').on('mouseenter', 'li', function() {

@@ -25,11 +25,11 @@ function parseSong(song) {
   return songObjects;
 
 }
-
-const onComplete = function() {
-  stringToPlay = prompt('Song finished playing');
-  playSong((parseSong(stringToPlay)), 400, onComplete);
-}
+// 
+// const onComplete = function() {
+//   stringToPlay = prompt('Song finished playing');
+//   playSong((parseSong(stringToPlay)), 400, onComplete);
+// }
 
 // playSong((parseSong(stringToPlay)), 400, onComplete);
 
